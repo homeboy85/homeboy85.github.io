@@ -1,6 +1,59 @@
 <!DOCTYPE html>
+<title>Noch ein Test</title>
 <html>
-<body>
-<p>Hallo, Test</p>
-</body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .blop {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            color: black;
+            position: relative;
+            padding: 12px;
+            cursor: pointer;
+        }
+        .blop::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-radius: 70% 40% 30% 80% / 55% 45% 60% 50%;
+            background: chartreuse;
+            transition: .5s;
+            z-index: -1;
+            position: absolute;
+            left: -10px;
+        }
+        .blop:hover::before {
+            width: 100px;
+            border-radius: 100px;
+            transition: .5s;
+            cursor: pointer;
+        }
+        ul li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+    </style>
+    <body>
+        <ul>
+            <li>
+                <button class="blop">Start</button>
+            </li>
+            <li>
+                <button class="blop">Eine tolle Seite</button>
+            </li>
+            <li>
+                <button class="blop">Eine spitzen Seite ueber mich</button>
+            </li>
+            <li>
+                <button class="blop">Noch ein Link</button>
+            </li>
+            <li>
+                <button class="blop">Zu guter Letzt</button>
+            </li>
+        </ul>
+    </body>
 </html>
